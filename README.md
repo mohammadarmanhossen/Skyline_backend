@@ -1,25 +1,25 @@
-# Hotel Booking Website (Villagio)
+# Hotel Booking Website (Skyline)
 
 **Final Assignment**
 
-Villagio is a comprehensive hotel booking system developed using Django REST Framework, featuring user authentication, hotel and booking management, payment processing, and review functionalities. This application supports CRUD operations for hotels and bookings, secure payments via SSLCommerz, and integrates.
+Skyline is a comprehensive hotel booking system developed using Django REST Framework, featuring user authentication, hotel and booking management, payment processing, and review functionalities. This application supports CRUD operations for hotels and bookings, secure payments via SSLCommerz, and integrates.
 
-- **Frontend Live Site:** [Villagio](https://hotel-front-website.netlify.app/)
-- **Backend Live Site:** [Render](https://hotel-backend-arcx.onrender.com/)
-- **Frontend GitHub:** [Hotel-Booking-Frontend](https://github.com/mohammadarmanhossen/hotel_front)
-- **Backend GitHub:** [Hotel-Booking-Website-Backend](https://github.com/mohammadarmanhossen/hotel_backend)
+- **Frontend Live Site:** [Netlify](https://skyline-frontend.netlify.app/)
+- **Backend Live Site:** [Render](https://skyline-backend-krnt.onrender.com/)
+- **Frontend GitHub:** [Skyline-Frontend](https://github.com/mohammadarmanhossen/Skyline_frontend)
+- **Backend GitHub:** [Skyline-Backend](https://github.com/mohammadarmanhossen/Skyline_backend)
 
 ### User Access Information
 - **Admin Role:**
 ```
-Username: arman
-Password:123
+Username: admin
+Password: admin
 ```
 
 - **Normal User:**
 ```
-Username: arman404
-Password: Arman404@
+Username: arman
+Password: arman
 ```
 ---
 
@@ -46,8 +46,8 @@ Password: Arman404@
 1. **Clone the repository:**
  ```bash
  
-git clone https://github.com/mohammadarmanhossen/hotel_backend
-cd hotel_backend
+git clone https://github.com/mohammadarmanhossen/Skyline_backend
+cd Skyline_backend
 ```
 
 Install dependencies:
