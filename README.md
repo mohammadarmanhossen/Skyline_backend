@@ -41,6 +41,111 @@ Password: arman
 
 ---
 
+
+
+## Api Intigration
+
+
+1.Hotel App:
+
+  Distict :
+```
+http://skyline-backend-krnt.onrender.com/district/
+
+```
+Hotels :
+```
+http://skyline-backend-krnt.onrender.com/hotels/
+```
+
+Review:
+```
+http://skyline-backend-krnt.onrender.com/reviews/
+```
+Bookes:
+```
+ttp://skyline-backend-krnt.onrender.com/bookeds/
+```
+
+
+2.User App:
+
+User Login :
+```
+https://skyline-backend-krnt.onrender.com/client/login/
+```
+User Register :
+```
+https://skyline-backend-krnt.onrender.com/client/register/
+```
+
+User Logout:
+```
+https://skyline-backend-krnt.onrender.com/client/logout/
+```
+Admin login:
+```
+https://skyline-backend-krnt.onrender.com/client/admin/login/
+```
+Admin logout :
+```
+https://skyline-backend-krnt.onrender.com/client/admin/logout/
+```
+
+User :
+```
+https://skyline-backend-krnt.onrender.com/client/users/
+```
+Contact:
+```
+https://skyline-backend-krnt.onrender.com/client/contact/
+```
+Change password:
+```
+https://skyline-backend-krnt.onrender.com/client/change_password/${user_id}/
+```
+
+
+
+
+
+
+3.Payment App:
+
+Checkout :
+```
+https://skyline-backend-krnt.onrender.com/checkout/
+
+```
+Order :
+```
+https://skyline-backend-krnt.onrender.com/order/
+```
+
+Created Payment:
+```
+https://skyline-backend-krnt.onrender.com/payment/create_payment/
+```
+Payment Success:
+```
+https://skyline-backend-krnt.onrender.com/payment/success/
+```
+Payment Cencel :
+```
+https://skyline-backend-krnt.onrender.com/payment/cancel /
+```
+Payment Failed :
+```
+https://skyline-backend-krnt.onrender.com/payment/failed /
+```
+
+
+
+
+
+
+
+---
 ## Installation and Setup
 
 1. **Clone the repository:**
