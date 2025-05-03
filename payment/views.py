@@ -56,9 +56,9 @@ class PaymentViewSet(viewsets.ViewSet):
             'value_a': bookedId,
             'value_b': user_id,
             'tran_id': tran_id,
-            'success_url': f"http://127.0.0.1:8000/payment/success/",
-            'fail_url': "http://127.0.0.1:8000/payment/failed/",
-            'cancel_url': "http://127.0.0.1:8000/payment/cancel/",
+            'success_url': f"https://skyline-backend-krnt.onrender.com/payment/success/",
+            'fail_url': "https://skyline-backend-krnt.onrender.com/failed/",
+            'cancel_url': "https://skyline-backend-krnt.onrender.com/cancel/",
              'currency': "BDT",
             'emi_option': 0,
             'cus_name': "arman",
@@ -97,7 +97,7 @@ class PaymentSuccessAPI(APIView):
         if booked:
             booked.is_paid = True
             booked.save()
-            return redirect("http://127.0.0.1:5501/booked_hotel.html")
+            return redirect("https://skyline-frontend.netlify.app/booked_hotel.html")
 
         return Response({"error": "Booking not found"}, status=404)
 
@@ -106,13 +106,13 @@ class PaymentFailedAPI(APIView):
 
 
     def post(self, request):
-        return redirect("http://127.0.0.1:5501/index.html")
+        return redirect("https://skyline-frontend.netlify.app/booked_hotel.html")
 
 
 class PaymentCancelAPI(APIView):
  
     def post(self, request):
-        return redirect("http://127.0.0.1:5501/index.html")
+        return redirect("https://skyline-frontend.netlify.app/booked_hotel.html")
 
 
 
