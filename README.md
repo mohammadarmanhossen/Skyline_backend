@@ -47,8 +47,8 @@ Password: arman
 
 
 1.Hotel App:
-
-  Distict :
+---
+Distict :
 ```
 http://skyline-backend-krnt.onrender.com/district/
 
@@ -67,7 +67,7 @@ Bookes:
 ttp://skyline-backend-krnt.onrender.com/bookeds/
 ```
 
-
+---
 2.User App:
 
 User Login :
@@ -105,11 +105,7 @@ Change password:
 https://skyline-backend-krnt.onrender.com/client/change_password/${user_id}/
 ```
 
-
-
-
-
-
+---
 3.Payment App:
 
 Checkout :
@@ -138,12 +134,6 @@ Payment Failed :
 ```
 https://skyline-backend-krnt.onrender.com/payment/failed /
 ```
-
-
-
-
-
-
 
 ---
 ## Installation and Setup
