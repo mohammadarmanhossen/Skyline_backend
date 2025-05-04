@@ -46,7 +46,7 @@ Password: arman
 ## Api Intigration
 
 ---
-1.Hotel App:
+Hotel App:
 ---
 Distict :
 ```
@@ -68,8 +68,8 @@ ttp://skyline-backend-krnt.onrender.com/bookeds/
 ```
 
 ---
-2.User App:
-
+User App:
+---
 User Login :
 ```
 https://skyline-backend-krnt.onrender.com/client/login/
