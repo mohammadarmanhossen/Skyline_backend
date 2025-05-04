@@ -259,7 +259,7 @@ class PaymentSuccessAPI(APIView):
 
         return Response({"error": "Booking not found"}, status=404)
 
-        
+
 class PaymentFailedAPI(APIView):
     def post(self, request):
         booked_id = request.data.get('value_a')
@@ -269,7 +269,7 @@ class PaymentFailedAPI(APIView):
 
         booked = Booked.objects.filter(id=booked_id).first()
         if booked:
-            booked.is_paid = False
+            booked.is_disabled = True
             booked.save()
         return redirect("https://skyline-frontend.netlify.app/booked_hotel.html")
 
@@ -284,6 +284,6 @@ class PaymentCancelAPI(APIView):
 
         booked = Booked.objects.filter(id=booked_id).first()
         if booked:
-            booked.is_paid = False
+            booked.is_disabled = True
             booked.save()
         return redirect("https://skyline-frontend.netlify.app/booked_hotel.html")
