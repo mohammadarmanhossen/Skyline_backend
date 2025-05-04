@@ -15,10 +15,10 @@ Review and Rating System
 Users can leave honest reviews and rate hotels based on their experience, helping others make informed decisions.
 Skyline is designed to be scalable, user-friendly, and secure — making it an ideal solution for real-world hotel booking needs.
 
-- **Frontend Live Site:** [Netlify](https://skyline-frontend.netlify.app/)
-- **Backend Live Site:** [Render](https://skyline-backend-krnt.onrender.com/)
-- **Frontend GitHub:** [Skyline-Frontend](https://github.com/mohammadarmanhossen/Skyline_frontend)
-- **Backend GitHub:** [Skyline-Backend](https://github.com/mohammadarmanhossen/Skyline_backend)
+- **Skyline Frontend Live Site:** [skyline-frontend.netlify.app](https://skyline-frontend.netlify.app/)
+- **Skyline Backend Live Site:** [skyline-backend-krnt.onrender.com](https://skyline-backend-krnt.onrender.com/)
+- **Skyline Frontend GitHub:** [Skyline-Frontend](https://github.com/mohammadarmanhossen/Skyline_frontend)
+- **Skyline Backend GitHub:** [Skyline-Backend](https://github.com/mohammadarmanhossen/Skyline_backend)
 
 ### User Access Information
 - **Admin Role:**
