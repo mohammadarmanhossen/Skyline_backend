@@ -105,9 +105,9 @@ Change password:
 https://skyline-backend-krnt.onrender.com/client/change_password/${user_id}/
 ```
 
----
-3.Payment App:
 
+Payment App:
+---
 Checkout :
 ```
 https://skyline-backend-krnt.onrender.com/checkout/
