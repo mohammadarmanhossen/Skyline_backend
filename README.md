@@ -138,7 +138,7 @@ https://skyline-backend-krnt.onrender.com/payment/failed /
 ---
 ## Installation and Setup
 
-1. **Clone the repository:**
+ **Clone the repository:**
  ```bash
  
 git clone https://github.com/mohammadarmanhossen/Skyline_backend
