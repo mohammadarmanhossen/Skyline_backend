@@ -43,6 +43,8 @@ class Booked(models.Model):
     out_date = models.DateField()
     total_amount = models.PositiveIntegerField(null=True, blank=True)
     is_paid = models.BooleanField(default=False)
+    is_cencelled = models.BooleanField(default=False)
+    is_failed = models.BooleanField(default=False)
 
 
 
