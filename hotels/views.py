@@ -14,6 +14,15 @@ from rest_framework import viewsets
 from .models import Booked
 from .serializer import BookedSerializer
 
+
+from rest_framework.pagination import PageNumberPagination
+
+class HotelPagination(PageNumberPagination):
+    page_size = 5
+    page_size_query_param = 'page_size'
+    max_page_size = 100
+
+
 class DistrictViewSet(viewsets.ModelViewSet):
     queryset=models.District.objects.all()
     serializer_class=serializer.DistrictSerializer
@@ -26,6 +35,7 @@ class HotelViewSet(viewsets.ModelViewSet):
     search_fields = ['district_name'] 
     search_fields = ['hotel_name'] 
     permission_classes = [AllowAny] 
+    pagination_class = HotelPagination
 
 
     def destroy(self, request, *args, **kwargs):

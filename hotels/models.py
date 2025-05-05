@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.utils.timezone import now
 import requests
 
+
 class District(models.Model):
     district_name= models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True, blank=True)
