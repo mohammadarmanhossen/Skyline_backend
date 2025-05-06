@@ -29,13 +29,13 @@ ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
 
 INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
@@ -104,7 +104,10 @@ CORS_ALLOW_ALL_ORIGINS = True
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://hotel-backend-arcx.onrender.com',
+
+    "http://127.0.0.1:5501",
+    'https://skyline-backend-krnt.onrender.com',
+
 ]
 
 
