@@ -54,17 +54,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-
-CORS_ALLOW_ALL_ORIGINS = True
-
-
-
-
 
 
 CORS_ALLOW_METHODS = [
@@ -108,9 +100,10 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 ALLOWED_HOSTS = ['*']
 
-
-
-
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5501",
+    "https://skyline-backend-krnt.onrender.com",
+]
 
 
 DATABASES = {
