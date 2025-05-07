@@ -31,14 +31,11 @@ class HotelSerializer(serializers.ModelSerializer):
 
 
 
-
-
 class BookedSerializer(serializers.ModelSerializer):
-    hotel_name = serializers.CharField(source='hotel_name.hotel_name', read_only=True)
-
     class Meta:
         model = models.Booked
-        fields = '__all__'
+        fields = '__all__' 
+
 
 
 
