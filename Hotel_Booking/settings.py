@@ -22,11 +22,6 @@ SECRET_KEY = 'django-insecure-(+v@mr*xii#26ye=(c=2)a$&-xz)iwqme0*k9z^16$$54w!%f0
 
 DEBUG = True
 
-
-ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
-
-
-
 INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     'django.contrib.admin',
@@ -38,6 +33,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'rest_framework',
+    'rest_framework_simplejwt',
     'rest_framework.authtoken',
     'hotels',
     'clients',
@@ -100,16 +96,11 @@ WSGI_APPLICATION = 'Hotel_Booking.wsgi.app'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://hotel-backend-arcx.onrender.com',
 ]
-
-
-
-
 
 DATABASES = {
     'default': {
