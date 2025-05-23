@@ -68,21 +68,21 @@ Password: arman
 ---
 Distict :
 ```
-http://skyline-backend-krnt.onrender.com/district/
+https://skyline-backend.vercel.app/district/
 
 ```
 Hotels :
 ```
-http://skyline-backend-krnt.onrender.com/hotels/
+https://skyline-backend.vercel.app/hotels/
 ```
 
 Review:
 ```
-http://skyline-backend-krnt.onrender.com/reviews/
+https://skyline-backend.vercel.app/reviews/
 ```
 Bookes:
 ```
-ttp://skyline-backend-krnt.onrender.com/bookeds/
+https://skyline-backend.vercel.app/bookeds/
 ```
 
 
@@ -90,37 +90,37 @@ User App:
 ---
 User Login :
 ```
-https://skyline-backend-krnt.onrender.com/client/login/
+https://skyline-backend.vercel.app/client/login/
 ```
 User Register :
 ```
-https://skyline-backend-krnt.onrender.com/client/register/
+https://skyline-backend.vercel.app/client/register/
 ```
 
 User Logout:
 ```
-https://skyline-backend-krnt.onrender.com/client/logout/
+https://skyline-backend.vercel.app/client/logout/
 ```
 Admin login:
 ```
-https://skyline-backend-krnt.onrender.com/client/admin/login/
+https://skyline-backend.vercel.app/client/admin/login/
 ```
 Admin logout :
 ```
-https://skyline-backend-krnt.onrender.com/client/admin/logout/
+https://skyline-backend.vercel.app/client/admin/logout/
 ```
 
 User :
 ```
-https://skyline-backend-krnt.onrender.com/client/users/
+https://skyline-backend.vercel.app/client/users/
 ```
 Contact:
 ```
-https://skyline-backend-krnt.onrender.com/client/contact/
+https://skyline-backend.vercel.app/client/contact/
 ```
 Change password:
 ```
-https://skyline-backend-krnt.onrender.com/client/change_password/${user_id}/
+https://skyline-backend.vercel.app/client/change_password/${user_id}/
 ```
 
 
@@ -128,29 +128,29 @@ Payment App:
 ---
 Checkout :
 ```
-https://skyline-backend-krnt.onrender.com/checkout/
+https://skyline-backend.vercel.app/checkout/
 
 ```
 Order :
 ```
-https://skyline-backend-krnt.onrender.com/order/
+https://skyline-backend.vercel.app/order/
 ```
 
 Created Payment:
 ```
-https://skyline-backend-krnt.onrender.com/payment/create_payment/
+https://skyline-backend.vercel.app/payment/create_payment/
 ```
 Payment Success:
 ```
-https://skyline-backend-krnt.onrender.com/payment/success/
+https://skyline-backend.vercel.app/payment/success/
 ```
 Payment Cencel :
 ```
-https://skyline-backend-krnt.onrender.com/payment/cancel /
+https://skyline-backend.vercel.app/payment/cancel /
 ```
 Payment Failed :
 ```
-https://skyline-backend-krnt.onrender.com/payment/failed /
+https://skyline-backend.vercel.app/payment/failed /
 ```
 
 ---
