@@ -1,5 +1,4 @@
 
-from django.shortcuts import render
 from rest_framework import viewsets
 from .import models
 from .import serializer
@@ -11,7 +10,6 @@ from django.utils.http import urlsafe_base64_encode,urlsafe_base64_decode
 from django.utils.encoding import force_bytes
 from django.contrib.auth.models import User
 
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import ListAPIView
 
 from django.core.mail import EmailMultiAlternatives
@@ -19,13 +17,10 @@ from django.template.loader import render_to_string
 from django.shortcuts import redirect
 from django.contrib.auth import authenticate,login,logout
 from rest_framework.authtoken.models import Token
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from rest_framework .decorators import api_view
-from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
+
 
 from django.contrib.auth import update_session_auth_hash
 
@@ -36,7 +31,6 @@ from django.contrib.auth import update_session_auth_hash
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
@@ -76,7 +70,7 @@ class UserRegistrationApiView(APIView):
             print("token ", token)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
             print("uid ", uid)
-            confirm_link = f"https://skyline-backend-krnt.onrender.com/client/active/{uid}/{token}"
+            confirm_link = f"https://skyline-backend.vercel.app/client/active/{uid}/{token}"
             email_subject = "Confirm Your Email"
             email_body = render_to_string('confirm_email.html', {'confirm_link' : confirm_link})
             
