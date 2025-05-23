@@ -66,7 +66,7 @@ Password: arman
 
 ### Api Intigration Hotel App:
 ---
-Distict :
+District:
 ```
 https://skyline-backend.vercel.app/district/
 
