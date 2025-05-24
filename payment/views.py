@@ -59,9 +59,9 @@ class PaymentViewSet(viewsets.ViewSet):
             'value_a': bookedId,
             'value_b': user_id,
             'tran_id': tran_id,
-            'success_url': f"https://skyline-backend-krnt.onrender.com/payment/success/",
-            'fail_url': f"https://skyline-backend-krnt.onrender.com/payment/failed/",
-            'cancel_url': f"https://skyline-backend-krnt.onrender.com/payment/cancel/",
+            'success_url': f"https://skyline-backend.vercel.app/payment/success/",
+            'fail_url': f"https://skyline-backend.vercel.app/payment/failed/",
+            'cancel_url': f"https://skyline-backend.vercel.app/payment/cancel/",
              'currency': "BDT",
             'emi_option': 0,
             'cus_name': "arman",
@@ -100,7 +100,7 @@ class PaymentSuccessAPI(APIView):
         if booked:
             booked.is_paid = True
             booked.save()
-            return redirect("https://skyline-frontend.netlify.app/booked_hotel.html")
+            return redirect("https://skyline-frontend-five.vercel.app/booked_hotel.html")
 
         return Response({"error": "Booking not found"}, status=404)
 
@@ -116,7 +116,7 @@ class PaymentFailedAPI(APIView):
         if booked:
             booked.is_failed = True 
             booked.save()
-        return redirect("https://skyline-frontend.netlify.app/booked_hotel.html")
+        return redirect("https://skyline-frontend-five.vercel.app/booked_hotel.html")
 
 
 class PaymentCancelAPI(APIView):
@@ -130,4 +130,4 @@ class PaymentCancelAPI(APIView):
         if booked:
             booked.is_cencelled = True 
             booked.save()
-        return redirect("https://skyline-frontend.netlify.app/booked_hotel.html")
+        return redirect("https://skyline-frontend-five.vercel.app/booked_hotel.html")

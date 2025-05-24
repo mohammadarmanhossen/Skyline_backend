@@ -92,9 +92,9 @@ def activate(request,uid64,token):
     if user is not None and default_token_generator.check_token(user,token):
         user.is_active=True
         user.save()
-        return redirect('https://skyline-frontend.netlify.app/login.html')
+        return redirect('https://skyline-frontend-five.vercel.app/login.html')
     else:
-        return redirect('https://skyline-frontend.netlify.app/registration')
+        return redirect('https://skyline-frontend-five.vercel.app/registration')
 
 
 class UserLoginApiView(APIView):
