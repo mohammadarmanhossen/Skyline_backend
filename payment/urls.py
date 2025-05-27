@@ -7,6 +7,7 @@ from .views import PaymentViewSet
 
 router = DefaultRouter()
 router.register('checkout', views.CheckoutViewSet)
+router.register('order', views.OrderViewSet)
 router.register(r'payment', PaymentViewSet, basename='payment')
 
 

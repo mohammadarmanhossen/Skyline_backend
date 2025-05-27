@@ -11,7 +11,7 @@ from rest_framework.response import Response
 
 
 from rest_framework import viewsets
-from .models import Booked,Order
+from .models import Booked
 from .serializer import BookedSerializer
 
 
@@ -38,14 +38,6 @@ class HotelViewSet(viewsets.ModelViewSet):
 class BookedViewSet(viewsets.ModelViewSet):
     queryset = Booked.objects.all()
     serializer_class = BookedSerializer
-
-
-
-
-
-class OrderViewSet(viewsets.ModelViewSet):
-    queryset = Order.objects.all()
-    serializer_class = serializer.OrderSerializers
 
 
 

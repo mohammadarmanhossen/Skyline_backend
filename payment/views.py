@@ -6,11 +6,17 @@ from rest_framework.decorators import action
 from django.contrib.auth.models import User
 import uuid
 from sslcommerz_lib import SSLCOMMERZ
-from .serializer import CheckoutSerializers
+from .serializer import CheckoutSerializers,OrderSerializers
 from .models import Checkout,Booked
 from django.shortcuts import redirect
 from rest_framework.permissions import AllowAny
+from .models import Order
 
+
+
+class OrderViewSet(viewsets.ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializers
 
 
 class CheckoutViewSet(viewsets.ModelViewSet):

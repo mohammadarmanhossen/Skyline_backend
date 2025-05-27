@@ -55,12 +55,7 @@ class Booked(models.Model):
     def __str__(self):
         return f"{self.hotel_name} - {self.room} Rooms"
 
-class Order(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="orders")
-    name = models.CharField(max_length=255)
-    email = models.EmailField()
-    address= models.TextField()
-    zip_code = models.CharField(max_length=10)
+
 
 
 
