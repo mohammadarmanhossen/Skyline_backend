@@ -47,8 +47,6 @@ class Booked(models.Model):
     is_failed = models.BooleanField(default=False)
     is_cencelled = models.BooleanField(default=False)
 
-
-
     def save(self, *args, **kwargs):
         if self.hotel_name and self.room:
             self.total_amount = self.hotel_name.price_per_night * self.room  
