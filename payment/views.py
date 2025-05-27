@@ -1,5 +1,5 @@
 
-from rest_framework import viewsets,status
+from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.decorators import action
@@ -17,15 +17,6 @@ from .models import Order
 class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializers
-
-    @action(detail=False, methods=['get'], url_path='by-booked/(?P<booked_id>[^/.]+)')
-    def get_order_by_booked(self, request, booked_id=None):
-        try:
-            order = Order.objects.get(booked__id=booked_id)
-            serializer = self.get_serializer(order)
-            return Response(serializer.data)
-        except Order.DoesNotExist:
-            return Response({"error": "Order not found"}, status=status.HTTP_404_NOT_FOUND)
 
 
 class CheckoutViewSet(viewsets.ModelViewSet):
