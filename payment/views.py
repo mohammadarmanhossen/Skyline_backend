@@ -97,7 +97,7 @@ class PaymentSuccessAPI(APIView):
         if booked:
             booked.is_paid = True
             booked.save()
-            return redirect("booked_hotel.html")
+            return redirect("https://skyline-frontend-five.vercel.app/booked_hotel.html")
 
         return Response({"error": "Booking not found"}, status=404)
 
@@ -113,7 +113,7 @@ class PaymentFailedAPI(APIView):
         if booked:
             booked.is_failed = True 
             booked.save()
-        return redirect("booked_hotel.html")
+        return redirect("https://skyline-frontend-five.vercel.app/booked_hotel.html")
 
 
 class PaymentCancelAPI(APIView):
@@ -127,5 +127,5 @@ class PaymentCancelAPI(APIView):
         if booked:
             booked.is_cencelled = True 
             booked.save()
-        return redirect("booked_hotel.html")
+        return redirect("https://skyline-frontend-five.vercel.app/booked_hotel.html")
     
