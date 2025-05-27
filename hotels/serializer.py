@@ -31,7 +31,6 @@ class HotelSerializer(serializers.ModelSerializer):
 
 
 
-
 class BookedSerializer(serializers.ModelSerializer):
     hotel = serializers.CharField(source='hotel_name.hotel_name', read_only=True) 
     hotel_name = serializers.PrimaryKeyRelatedField(queryset=Hotel.objects.all(), write_only=True)
