@@ -31,23 +31,14 @@ class HotelSerializer(serializers.ModelSerializer):
 
 
 
-# class BookedSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = models.Booked
-#         fields = '__all__' 
-
-
 
 class BookedSerializer(serializers.ModelSerializer):
-    hotel = serializers.CharField(source='hotel_name.hotel_name', read_only=True)  # নাম দেখানোর জন্য
-    hotel_name = serializers.PrimaryKeyRelatedField(queryset=Hotel.objects.all(), write_only=True)  # ID পাঠানোর জন্য
+    hotel = serializers.CharField(source='hotel_name.hotel_name', read_only=True) 
+    hotel_name = serializers.PrimaryKeyRelatedField(queryset=Hotel.objects.all(), write_only=True)
 
     class Meta:
         model = models.Booked
-        fields = ['id', 'hotel_name', 'hotel',  # ID ও নাম দুইটাই থাকছে
-                'room', 'in_date', 'out_date',
-                'total_amount', 'is_paid', 'is_failed', 'is_cencelled'
-              ]
+        fields = ['id', 'hotel_name', 'hotel','room', 'in_date', 'out_date','total_amount', 'is_paid', 'is_failed', 'is_cencelled']
  
 
 
