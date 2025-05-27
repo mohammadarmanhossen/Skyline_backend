@@ -13,10 +13,11 @@ class Order(models.Model):
 
 class Checkout(models.Model):
     booked = models.ForeignKey(Booked, on_delete=models.CASCADE, related_name="checkouts", default=1)  
+    order = models.OneToOneField("Order", on_delete=models.SET_NULL, null=True, blank=True, related_name="order")
     is_paid = models.BooleanField(default=False)
     is_canceled = models.BooleanField(default=False)
     is_failed = models.BooleanField(default=False)
-    order = models.OneToOneField("Order", on_delete=models.SET_NULL, null=True, blank=True, related_name="order")
+   
 
 
 

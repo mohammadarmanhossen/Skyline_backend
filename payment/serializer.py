@@ -9,8 +9,9 @@ class OrderSerializers(serializers.ModelSerializer):
 
 
 class CheckoutSerializers(serializers.ModelSerializer):
-    order = OrderSerializers(read_only=True)
+    order = OrderSerializers(read_only=True)  
 
     class Meta:
         model = Checkout
         fields = "__all__"
+
