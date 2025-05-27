@@ -25,10 +25,9 @@ class HotelViewSet(viewsets.ModelViewSet):
     queryset=models.Hotel.objects.all()
     serializer_class=serializer.HotelSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter]
-    search_fields = ['district_name'] 
+    filterset_fields = ['district_names']
     search_fields = ['hotel_name'] 
     permission_classes = [AllowAny] 
-
 
     def destroy(self, request, *args, **kwargs):
         hotel = self.get_object()
