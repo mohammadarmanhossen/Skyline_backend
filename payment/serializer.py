@@ -1,12 +1,6 @@
 from rest_framework import serializers
-from .models import Checkout, Order
+from .models import Checkout
 
-
-
-class OrderSerializers(serializers.ModelSerializer):
-    class Meta:
-        model = Order
-        fields = "__all__"
 
 
 class CheckoutSerializers(serializers.ModelSerializer):

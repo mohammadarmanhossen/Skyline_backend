@@ -10,6 +10,7 @@ router.register('district',views.DistrictViewSet)
 router.register('hotels',views.HotelViewSet)
 router.register('reviews',views.ReviewViewSet)
 router.register('bookeds',views.BookedViewSet)
+router.register('orders',views.OrderViewSet)
 urlpatterns = [
     path('',include(router.urls)),
 ]

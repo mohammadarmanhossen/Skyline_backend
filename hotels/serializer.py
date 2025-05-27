@@ -3,7 +3,7 @@ from .models import District
 from .import models
 
 from rest_framework import serializers
-from .models import Hotel
+from .models import Hotel,Order
 
 class DistrictSerializer(serializers.ModelSerializer):
     class Meta:
@@ -39,6 +39,13 @@ class BookedSerializer(serializers.ModelSerializer):
         model = models.Booked
         fields = ['id', 'hotel_name', 'hotel','room', 'in_date', 'out_date','total_amount', 'is_paid', 'is_failed', 'is_cencelled']
  
+
+
+
+class OrderSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = "__all__"
 
 
 class ReviewSerializer(serializers.ModelSerializer): 
