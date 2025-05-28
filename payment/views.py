@@ -17,6 +17,7 @@ from .models import Order
 class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializers
+    filterset_fields = ['booked'] 
 
 
 class CheckoutViewSet(viewsets.ModelViewSet):
