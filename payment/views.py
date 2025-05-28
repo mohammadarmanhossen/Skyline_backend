@@ -13,10 +13,19 @@ from rest_framework.permissions import AllowAny
 from .models import Order
 
 
-
 class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializers
+
+    # Custom action to get order by booked_id
+    @action(detail=False, methods=['get'], url_path='by-booked/(?P<booked_id>[^/.]+)')
+    def get_order_by_booked(self, request, booked_id=None):
+        try:
+            order = Order.objects.get(booked_id=booked_id)
+            serializer = self.get_serializer(order)
+            return Response(serializer.data)
+        except Order.DoesNotExist:
+            return Response({"error": "Order not found for this booking"}, status=404)
 
 
 class CheckoutViewSet(viewsets.ModelViewSet):
