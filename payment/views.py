@@ -11,12 +11,23 @@ from .models import Checkout,Booked
 from django.shortcuts import redirect
 from rest_framework.permissions import AllowAny
 from .models import Order
-
+from .serializer import OrderSerializers
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 
 class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializers
+    
+@api_view(['GET'])
+def get_order_by_booked(request, booked_id):
+    try:
+        order = Order.objects.get(booked__id=booked_id)
+        serializer = OrderSerializers(order)
+        return Response(serializer.data)
+    except Order.DoesNotExist:
+        return Response({"error": "Order not found"}, status=404)
 
 
 class CheckoutViewSet(viewsets.ModelViewSet):
